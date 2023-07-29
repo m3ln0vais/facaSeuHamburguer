@@ -18,10 +18,14 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page">
+              <router-link to="/">Home</router-link>
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">Pedidos</a>
+            <a class="nav-link text-decoration" aria-current="page">
+              <router-link to="/pedidos">Pedidos</router-link>
+            </a>
           </li>
         </ul>
       </div>
