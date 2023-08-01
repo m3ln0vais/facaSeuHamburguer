@@ -79,31 +79,17 @@
   ],
   "burgers": [
     {
-      "nome": "MEL",
-      "carne": "Picanha",
-      "pao": "Integral",
+      "nome": "a",
+      "carne": "Alcatra",
+      "pao": "3 Queijos",
       "opcionais": [
+        "Tomate",
         "Bacon",
         "Cheddar",
-        "Tomate",
         "Pepino"
       ],
-      "status": "Finalizado",
-      "id": 1
-    },
-    {
-      "nome": "Mel Anny Novais de Castro Silva",
-      "carne": "Veggie burger",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        "Bacon",
-        "Cheddar",
-        "Tomate",
-        "Cebola roxa",
-        "Pepino"
-      ],
-      "status": "Em produção",
-      "id": 2
+      "status": "Solicitado",
+      "id": 3
     }
   ]
 }
