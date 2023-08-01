@@ -18,14 +18,14 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page">
-              <router-link to="/">Home</router-link>
-            </a>
+            <router-link to="/">
+              <a class="nav-link active" aria-current="page"> Home </a>
+            </router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-decoration" aria-current="page">
-              <router-link to="/pedidos">Pedidos</router-link>
-            </a>
+            <router-link to="/pedidos">
+              <a class="nav-link text-decoration" aria-current="page"> Pedidos </a>
+            </router-link>
           </li>
         </ul>
       </div>
@@ -38,3 +38,9 @@ export default {
   name: "navbar",
 };
 </script>
+
+<style scoped>
+a{
+  text-decoration: none;
+}
+</style>
