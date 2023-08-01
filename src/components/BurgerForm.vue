@@ -109,7 +109,7 @@ export default {
   },
   methods: {
     async getIngredientes() {
-      const req = await fetch("https://faca-seu-hamburguer.vercel.app//ingredientes");
+      const req = await fetch("https://json-server-theta-two.vercel.app/ingredientes");
       const data = await req.json();
       console.log(data);
 
@@ -130,7 +130,7 @@ export default {
 
       const dataJson = JSON.stringify(data);
 
-      const req = await fetch("https://faca-seu-hamburguer.vercel.app//burgers", {
+      const req = await fetch("https://json-server-theta-two.vercel.app/burgers", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: dataJson,
