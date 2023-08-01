@@ -19,7 +19,7 @@
         <ul class="navbar-nav">
           <li class="nav-item">
             <router-link to="/">
-              <a class="nav-link active" aria-current="page"> Home </a>
+              <a class="nav-link active" aria-current="page"> Início </a>
             </router-link>
           </li>
           <li class="nav-item">

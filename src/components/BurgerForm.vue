@@ -41,7 +41,7 @@
         <label
           class="border-start border-5 border-warning ps-2 mb-2"
           for="carne"
-          >Escolha a carne do seu Burger:</label
+          >Escolha a carne do seu Hambúrguer:</label
         >
         <select
           class="form-select form-select-sm"
