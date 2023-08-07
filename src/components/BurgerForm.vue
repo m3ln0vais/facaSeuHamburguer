@@ -17,7 +17,7 @@
           id="nome"
           name="nome"
           v-model="nome"
-          required
+          required="required"
         />
         <div class="invalid-feedback">Insira um nome</div>
       </div>
@@ -31,7 +31,7 @@
           name="pao"
           id="pao"
           v-model="pao"
-          required
+          required="required"
         >
           <option v-for="pao in paes" :key="pao.id" :value="pao.tipo">
             {{ pao.tipo }}
@@ -50,7 +50,7 @@
           name="carne"
           id="carne"
           v-model="carne"
-          required
+          required="required"
         >
           <option v-for="carne in carnes" :key="carne.id" :value="carne.tipo">
             {{ carne.tipo }}
@@ -67,12 +67,7 @@
         >
           Selecione os opcionais:
         </label>
-        <div
-          class="mb-3 form-check"
-          v-for="opcional in opcionaisdata"
-          :key="opcional.id"
-          req
-        >
+        <div class="mb-3 form-check" v-for="opcional in opcionaisdata" :key="opcional.id">
           <input
             type="checkbox"
             class="form-check-input"
@@ -121,32 +116,41 @@ export default {
       this.carnes = data.carnes;
       this.opcionaisdata = data.opcionais;
     },
+    // enviarForm(){
+    //   console.log('a');
+    //   this.createBurger()
+    // },
     async createBurger(e) {
-      console.log(e.target);
-      e.target.classList.add("was-validated");
+      // console.log(e.target);
+      if ($("#nome").val() === "" || $("#pao").val() === null || $("#carne").val() === null) {
+        e.target.classList.add("was-validated");
+      } else {
+        const data = {
+          nome: this.nome,
+          carne: this.carne,
+          pao: this.pao,
+          opcionais: Array.from(this.opcionais),
+          status: "Solicitado",
+        };
 
-      const data = {
-        nome: this.nome,
-        carne: this.carne,
-        pao: this.pao,
-        opcionais: Array.from(this.opcionais),
-        status: "Solicitado",
-      };
+        const dataJson = JSON.stringify(data);
 
-      const dataJson = JSON.stringify(data);
+        const req = await fetch("http://localhost:3000/burgers", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: dataJson,
+        });
 
-      const req = await fetch("http://localhost:3000/burgers", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: dataJson,
-      });
+        const res = await req.json();
 
-      const res = await req.json();
+        console.log(res);
 
-      this.nome = "";
-      this.carne = "";
-      this.pao = "";
-      this.opcionais = [];
+        this.nome = "";
+        this.carne = "";
+        this.pao = "";
+        this.opcionais = [];
+        e.target.classList.remove("was-validated");
+      }
     },
   },
   mounted() {
