@@ -67,7 +67,7 @@ export default {
   },
   methods: {
     async getPedidos() {
-      const req = await fetch("https://json-server-theta-two.vercel.app/burgers");
+      const req = await fetch("http://localhost:3000/burgers");
 
       const data = await req.json();
 
@@ -77,14 +77,14 @@ export default {
       this.getStatus();
     },
     async getStatus() {
-      const req = await fetch("https://json-server-theta-two.vercel.app/status");
+      const req = await fetch("http://localhost:3000/status");
 
       const data = await req.json();
 
       this.status = data;
     },
     async deleteBurger(id) {
-      const req = await fetch(`https://json-server-theta-two.vercel.app/burgers/${id}`, {
+      const req = await fetch(`http://localhost:3000/burgers/${id}`, {
         method: "DELETE",
       });
 
@@ -102,7 +102,7 @@ export default {
 
       const dataJson = JSON.stringify({ status: option });
 
-      const req = await fetch(`https://json-server-theta-two.vercel.app/burgers/${id}`, {
+      const req = await fetch(`http://localhost:3000/burgers/${id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: dataJson,
@@ -123,4 +123,3 @@ export default {
   },
 };
 </script>
-
