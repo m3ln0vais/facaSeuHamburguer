@@ -77,5 +77,270 @@
       "tipo": "Finalizado"
     }
   ],
-  "burgers": []
+  "burgers": [
+    {
+      "nome": "MEL",
+      "carne": "Picanha",
+      "pao": "Parmesão e Orégano",
+      "opcionais": [
+        "Cheddar",
+        "Bacon",
+        "Tomate",
+        "Pepino"
+      ],
+      "status": "Solicitado",
+      "id": 1
+    },
+    {
+      "nome": null,
+      "carne": null,
+      "pao": null,
+      "opcionais": [],
+      "status": "Solicitado",
+      "id": 2
+    },
+    {
+      "nome": null,
+      "carne": null,
+      "pao": null,
+      "opcionais": [],
+      "status": "Solicitado",
+      "id": 3
+    },
+    {
+      "nome": "MEL",
+      "carne": null,
+      "pao": "Italiano Branco",
+      "opcionais": [],
+      "status": "Solicitado",
+      "id": 4
+    },
+    {
+      "nome": "b",
+      "carne": "Alcatra",
+      "pao": "3 Queijos",
+      "opcionais": [],
+      "status": "Solicitado",
+      "id": 5
+    },
+    {
+      "nome": null,
+      "carne": null,
+      "pao": null,
+      "opcionais": [],
+      "status": "Solicitado",
+      "id": 6
+    },
+    {
+      "nome": "",
+      "carne": "",
+      "pao": "",
+      "opcionais": [
+        "Cheddar"
+      ],
+      "status": "Solicitado",
+      "id": 7
+    },
+    {
+      "nome": null,
+      "carne": null,
+      "pao": null,
+      "opcionais": [
+        "Cheddar"
+      ],
+      "status": "Solicitado",
+      "id": 8
+    },
+    {
+      "nome": "MEL",
+      "carne": "Picanha",
+      "pao": "Parmesão e Orégano",
+      "opcionais": [
+        "Cheddar"
+      ],
+      "status": "Solicitado",
+      "id": 9
+    },
+    {
+      "nome": "MEL",
+      "carne": "Picanha",
+      "pao": "Parmesão e Orégano",
+      "opcionais": [
+        "Bacon"
+      ],
+      "status": "Solicitado",
+      "id": 10
+    },
+    {
+      "nome": "MEL",
+      "carne": "Picanha",
+      "pao": "Parmesão e Orégano",
+      "opcionais": [
+        "Bacon"
+      ],
+      "status": "Solicitado",
+      "id": 11
+    },
+    {
+      "nome": "MEL",
+      "carne": "Picanha",
+      "pao": "Parmesão e Orégano",
+      "opcionais": [
+        "Cheddar"
+      ],
+      "status": "Solicitado",
+      "id": 12
+    },
+    {
+      "nome": "MEL",
+      "carne": "Veggie burger",
+      "pao": "Parmesão e Orégano",
+      "opcionais": [
+        "Bacon"
+      ],
+      "status": "Solicitado",
+      "id": 13
+    },
+    {
+      "nome": "Mel Anny Novais de Castro Silva",
+      "carne": "Maminha",
+      "pao": "Integral",
+      "opcionais": [
+        "Pepino"
+      ],
+      "status": "Solicitado",
+      "id": 14
+    },
+    {
+      "nome": "MEL",
+      "carne": "Maminha",
+      "pao": "Parmesão e Orégano",
+      "opcionais": [
+        "Bacon"
+      ],
+      "status": "Solicitado",
+      "id": 15
+    },
+    {
+      "nome": "MEL",
+      "carne": "Maminha",
+      "pao": "Italiano Branco",
+      "opcionais": [
+        "Bacon"
+      ],
+      "status": "Solicitado",
+      "id": 16
+    },
+    {
+      "nome": "MEL",
+      "carne": "Alcatra",
+      "pao": "3 Queijos",
+      "opcionais": [
+        "Bacon",
+        "Pepino"
+      ],
+      "status": "Solicitado",
+      "id": 17
+    },
+    {
+      "nome": "MEL",
+      "carne": "Alcatra",
+      "pao": "Parmesão e Orégano",
+      "opcionais": [
+        "Tomate"
+      ],
+      "status": "Solicitado",
+      "id": 18
+    },
+    {
+      "nome": "MEL",
+      "carne": "Alcatra",
+      "pao": "3 Queijos",
+      "opcionais": [
+        "Bacon"
+      ],
+      "status": "Solicitado",
+      "id": 19
+    },
+    {
+      "nome": "MEL",
+      "carne": "Alcatra",
+      "pao": "3 Queijos",
+      "opcionais": [
+        "Bacon"
+      ],
+      "status": "Solicitado",
+      "id": 20
+    },
+    {
+      "nome": "MEL",
+      "carne": "Alcatra",
+      "pao": "Parmesão e Orégano",
+      "opcionais": [
+        "Bacon"
+      ],
+      "status": "Solicitado",
+      "id": 21
+    },
+    {
+      "nome": "Mel Anny Novais de Castro Silva",
+      "carne": "Picanha",
+      "pao": "Parmesão e Orégano",
+      "opcionais": [
+        "Bacon"
+      ],
+      "status": "Solicitado",
+      "id": 22
+    },
+    {
+      "nome": "Mel Anny Novais de Castro Silva",
+      "carne": "Picanha",
+      "pao": "Parmesão e Orégano",
+      "opcionais": [
+        "Bacon"
+      ],
+      "status": "Solicitado",
+      "id": 23
+    },
+    {
+      "nome": "MEL",
+      "carne": "Alcatra",
+      "pao": "Integral",
+      "opcionais": [
+        "Bacon"
+      ],
+      "status": "Solicitado",
+      "id": 24
+    },
+    {
+      "nome": "Mel Anny Novais de Castro Silva",
+      "carne": "Alcatra",
+      "pao": "3 Queijos",
+      "opcionais": [
+        "Bacon"
+      ],
+      "status": "Solicitado",
+      "id": 25
+    },
+    {
+      "nome": "b",
+      "carne": "Picanha",
+      "pao": "Parmesão e Orégano",
+      "opcionais": [
+        "Salame"
+      ],
+      "status": "Solicitado",
+      "id": 26
+    },
+    {
+      "nome": "Mel Anny Novais de Castro Silva",
+      "carne": "Alcatra",
+      "pao": "3 Queijos",
+      "opcionais": [
+        "Bacon"
+      ],
+      "status": "Solicitado",
+      "id": 27
+    }
+  ]
 }

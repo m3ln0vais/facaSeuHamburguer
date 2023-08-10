@@ -7,6 +7,7 @@
       @submit.prevent="createBurger"
       novalidate
     >
+      <div class="alert alert-success d-none py-1" id="pedidoCad" role="alert"></div>
       <div class="mb-3">
         <label for="nome" class="form-label border-start border-5 border-warning ps-2">
           Nome do cliente:
@@ -67,6 +68,9 @@
         >
           Selecione os opcionais:
         </label>
+        <div class="alert alert-warning py-1" role="alert">
+          Selecione pelo menos <strong>1 opcional</strong>
+        </div>
         <div class="mb-3 form-check" v-for="opcional in opcionaisdata" :key="opcional.id">
           <input
             type="checkbox"
@@ -74,6 +78,7 @@
             name="opcionais"
             v-model="opcionais"
             :value="opcional.tipo"
+            required
           />
           <label class="form-check-label" for="opcionais">
             {{ opcional.tipo }}
@@ -110,19 +115,17 @@ export default {
     async getIngredientes() {
       const req = await fetch("http://localhost:3000/ingredientes");
       const data = await req.json();
-      // console.log(data);
 
       this.paes = data.paes;
       this.carnes = data.carnes;
       this.opcionaisdata = data.opcionais;
     },
-    // enviarForm(){
-    //   console.log('a');
-    //   this.createBurger()
-    // },
     async createBurger(e) {
-      // console.log(e.target);
-      if ($("#nome").val() === "" || $("#pao").val() === null || $("#carne").val() === null) {
+      if (
+        $("#nome").val() === "" ||
+        $("#pao").val() === null ||
+        $("#carne").val() === null
+      ) {
         e.target.classList.add("was-validated");
       } else {
         const data = {
@@ -143,13 +146,21 @@ export default {
 
         const res = await req.json();
 
-        console.log(res);
+        $("#pedidoCad").append(`Pedido Nº ${res.id} cadastrado.`);
+
+        console.log(res.id);
 
         this.nome = "";
         this.carne = "";
         this.pao = "";
         this.opcionais = [];
         e.target.classList.remove("was-validated");
+
+        $("#pedidoCad").removeClass("d-none");
+
+        setTimeout(function () {
+          $("#pedidoCad").addClass("d-none");
+        }, 5000);
       }
     },
   },
