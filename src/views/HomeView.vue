@@ -1,6 +1,6 @@
 <template>
   <div>
-    <banner />
+    <!-- <banner /> -->
     <div>
       <h1 class="text-center pt-2">Monte o seu Hambúrguer:</h1>
       <burgerForm />
