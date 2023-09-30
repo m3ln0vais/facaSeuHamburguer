@@ -76,6 +76,7 @@
             type="checkbox"
             class="form-check-input"
             name="opcionais"
+            id="o"
             v-model="opcionais"
             :value="opcional.tipo"
             required
@@ -146,7 +147,7 @@ export default {
 
         const res = await req.json();
 
-        $("#pedidoCad").append(`Pedido Nº ${res.id} cadastrado.`);
+        $("#pedidoCad").text(`Pedido Nº ${res.id} cadastrado.`);
 
         console.log(res.id);
 
