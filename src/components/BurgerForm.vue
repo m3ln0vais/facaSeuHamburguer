@@ -155,7 +155,7 @@ export default {
         this.opcionais = [];
         e.target.classList.remove("was-validated");
 
-        $("form").scrollTop(500);
+        $('html,body').scrollTop(0);
         $("#pedidoCad").removeClass("d-none");
 
         setTimeout(function () {
