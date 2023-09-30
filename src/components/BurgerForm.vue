@@ -149,7 +149,7 @@ export default {
         });
         const res = await req.json();
 
-        $("#pedidoCad").append(`Pedido Nº ${res.id} cadastrado.`);
+        $("#pedidoCad").text(`Pedido Nº ${res.id} cadastrado.`);
 
         console.log(res.id);
 
