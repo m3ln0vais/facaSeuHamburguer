@@ -68,7 +68,7 @@
         >
           Selecione os opcionais:
         </label>
-        <div class="alert alert-warning py-1" role="alert">
+        <div class="alert alert-warning py-1 d-none" id="minOpcional" role="alert">
           Selecione pelo menos <strong>1 opcional</strong>
         </div>
         <div class="mb-3 form-check" v-for="opcional in opcionaisdata" :key="opcional.id">
@@ -79,7 +79,7 @@
             id="o"
             v-model="opcionais"
             :value="opcional.tipo"
-            required
+            required="required"
           />
           <label class="form-check-label" for="opcionais">
             {{ opcional.tipo }}
@@ -128,7 +128,10 @@ export default {
         $("#carne").val() === null
       ) {
         e.target.classList.add("was-validated");
-      } else {
+      }
+      if ($(".form-check-input").is(":checked")) {
+        $("#minOpcional").addClass("d-none");
+
         const data = {
           nome: this.nome,
           carne: this.carne,
@@ -144,10 +147,9 @@ export default {
           headers: { "Content-Type": "application/json" },
           body: dataJson,
         });
-
         const res = await req.json();
 
-        $("#pedidoCad").text(`Pedido Nº ${res.id} cadastrado.`);
+        $("#pedidoCad").append(`Pedido Nº ${res.id} cadastrado.`);
 
         console.log(res.id);
 
@@ -157,11 +159,15 @@ export default {
         this.opcionais = [];
         e.target.classList.remove("was-validated");
 
+        $("html,body").scrollTop(850);
         $("#pedidoCad").removeClass("d-none");
 
         setTimeout(function () {
           $("#pedidoCad").addClass("d-none");
-        }, 5000);
+        }, 3000);
+      } else {
+        $("#minOpcional").removeClass("d-none");
+        e.target.classList.add("was-validated");
       }
     },
   },
